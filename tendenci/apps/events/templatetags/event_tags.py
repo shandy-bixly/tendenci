@@ -22,6 +22,14 @@ from tendenci.apps.events.forms import EventSimpleSearchForm
 register = Library()
 
 
+@register.inclusion_tag("events/credits.html", takes_context=True)
+def credits_form_display(context, event, credit_forms):
+    context.update({
+        "event": event,
+        "credit_forms": credit_forms
+    })
+    return context
+
 @register.inclusion_tag("events/options.html", takes_context=True)
 def event_options(context, user, event):
     context.update({
