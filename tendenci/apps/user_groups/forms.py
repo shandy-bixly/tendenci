@@ -173,7 +173,7 @@ class GroupForm(TendenciBaseForm):
         self.fields['entity'].initial = entity
         self.fields['entity'].required = True
         self.fields['entity'].empty_label = None
-        self.fields['logo'].validators = [FileValidator(allowed_extensions=('.jpeg', '.jpg', '.png', '.gif',))]
+        #self.fields['logo'].validators = [FileValidator(allowed_extensions=('.jpeg', '.jpg', '.png', '.gif',))]
         self.fields['logo'].required = False
 
     def clean_name(self):
